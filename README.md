@@ -25,7 +25,7 @@ To build from source, clone the latest version from this repository into your ca
 
 ```sh
 cd catkin_workspace/src
-git clone https://github.com/ethz-asl/ros_best_practices.git
+git clone https://github.com/ValerioMa/aruco_description
 cd ../
 rosdep install --from-paths . --ignore-src
 catkin_make
@@ -135,3 +135,4 @@ These are all the strings that can be used as **`aruco_dictionary`**
 ## Credits
 - The script to generate the png images of the Aruco code is based on Adrian Rosebrock work that can be found at this [link](https://www.pyimagesearch.com/2020/12/14/generating-aruco-markers-with-opencv-and-python/)
 - The dae template and the xacro definition is extracted from [RDaneelOlivav](https://gist.github.com/RDaneelOlivav)  work and can be found [here](https://gist.github.com/RDaneelOlivav/990addc733fbeb8549c3979d5bca41b2)
+- The README template is taken from [ethz-asl](https://github.com/ethz-asl/ros_best_practices.git)
