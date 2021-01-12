@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<package>
+  <name>aruco_description</name>
+  <version>0.0.1</version>
+  <description>Package to generate aruco code description</description>
+
+  <maintainer email="valerio.magnago@gmail.com">Valerio Magnago</maintainer>
+  <license>TODO</license>
+  <author email="valerio.magnago@gmail.com">Valerio Magnago</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+</package>
