@@ -29,11 +29,12 @@ git clone https://github.com/ValerioMa/aruco_description
 cd ../
 rosdep install --from-paths . --ignore-src
 catkin_make
+source devel/setup.bash
 ```
 
 ## Usage
 
-Suppose that you want to use the description of the Aruco code with id=*1*  from the *DICT_4X4_50* dictionary. 
+Suppose that you want to use the description of the Aruco code with id=*1*  from the *DICT_4X4_50* dictionary.
 The first step is to generate the mesh of that specific code:
 
 ```sh
@@ -70,13 +71,13 @@ Once the aruco is generate we can:
       <xacro:arg name="aruco_l" default="0.2"/>
       <xacro:arg name="white_border" default="0.1"/>
       <xacro:include filename="$(find aruco_description)/urdf/general_aruco.xacro"/>
-  	
+
   	<link name="my_awesome_link"/>
-  	
-      <xacro:generic_aruco aruco_dictionary="$(arg aruco_dictionary)" aruco_id="$(arg aruco_id)" aruco_l="$(arg aruco_l)" aruco_name="$(arg aruco_name)" white_border="$(arg white_border)" connected_to="my_awesome_link">        
+
+      <xacro:generic_aruco aruco_dictionary="$(arg aruco_dictionary)" aruco_id="$(arg aruco_id)" aruco_l="$(arg aruco_l)" aruco_name="$(arg aruco_name)" white_border="$(arg white_border)" connected_to="my_awesome_link">
           <origin xyz="0 0 0" rpy="0 0 0" />
       </xacro:generic_aruco>
-  
+
   </robot>
   ```
 
@@ -105,9 +106,9 @@ Once the aruco is generate we can:
   * **`x`** spawn position of the aruco code along x axis
   * **`y`** spawn position of the aruco code along y axis
   * **`z`** spawn position of the aruco code along z axis
-  * **`roll`** spawn roll angle of the aruco code 
+  * **`roll`** spawn roll angle of the aruco code
   * **`pitch`** spawn pitch angle of the aruco code
-  * **`yaw`** spawn yaw angle of the aruco code 
+  * **`yaw`** spawn yaw angle of the aruco code
   * **`aruco_dictionary`** dictionary where to take the aruco code
   * **`aruco_id`** id of the aruco to store in the parameter
 
